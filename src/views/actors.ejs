@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head', {
+    title: 'Lista de Actores'
+  }) %>
+
+  <body>
+    <%- include('partials/header') %>
+
+    <h1>Lista de Actores</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% actors.forEach(actor => { %>
+        <tr>
+            <td><%= actor.first_name %></td>
+            <td><%= actor.last_name %></td>
+           <td><span class="badge bg-primary badge-pill"><%= actor.rating %></span></td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+    
+  </body>
+</html>
