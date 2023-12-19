@@ -13,10 +13,20 @@ const {
   delete: remove,
   destroy,
 } = require("../controllers/moviesController");
+
+
+
+
+
+
+
+
+
 const {uploadOneImage} = require("../middlewares/upload");
 
 router
 .get("/movies",list)
+
 .get("/movies/new",newest)
 .get("/movies/recommended",recomended)
 .get("/movies/detail/:id",detail)
